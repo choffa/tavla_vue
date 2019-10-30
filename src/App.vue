@@ -1,18 +1,19 @@
 <template>
   <div id="app">
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-    <DepartureBoard></DepartureBoard>
+    <boards></boards>
   </div>
 </template>
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
-import DepartureBoard from './components/DepartureBoard.vue'
+// import DepartureBoard from './components/DepartureBoard.vue'
+import Boards from './components/Boards.vue'
 
 export default {
   name: 'app',
   components: {
-    DepartureBoard
+    Boards
   }
 }
 </script>

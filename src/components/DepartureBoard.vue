@@ -1,45 +1,66 @@
 <template>
 <div id="container">
-  <div id="station-header">
-    <font-awesome-icon icon="bus" /><span class="station-name">Røyneberg</span>
-  </div>
-  <div class="departure" v-for="n in 4" v-bind:key="n">
-    <span class="time">14:00</span><span class="destination">Stavanger</span>
-  </div>
+  <table>
+    <tr class="station-header">
+      <th><font-awesome-icon icon="bus" /></th>
+      <th>{{ stopPlace.name }}</th>
+    </tr>
+    <tr v-for="(call, idx) in stopPlace.estimatedCalls" :key="idx">
+      <td>{{ getTime(call) }}</td>
+      <td>{{ call.destinationDisplay.frontText }}</td>
+    </tr>
+  </table>
 </div>
 </template>
 
 <script>
-export default {
+import { ZonedDateTime, DateTimeFormatter } from '@js-joda/core';
 
+function getTime(call) {
+  const format = DateTimeFormatter.ofPattern(
+    "yyyy-MM-dd'T'HH:mm:ssZ"
+  );
+  const time = ZonedDateTime.parse(
+    call.actualDepartureTime ||
+    call.expectedDepartureTime ||
+    call.aimedDepartureTime,
+    format
+  );
+  return time.format(DateTimeFormatter.ofPattern('HH:mm'));
+}
+
+export default {
+  props: {
+    stopPlace: {
+      type: Object,
+      required: true
+    },
+  },
+  methods: {
+    getTime: getTime,
+  },
 }
 </script>
 
-<style>
+<style scoped>
 
 #container {
   background: rgb(12, 100, 12);
-  width: 20em;
-  height: 20em;
   max-width: 20em;
-  max-height: 20em;
+  max-height: 25em;
   color: floralwhite;
   padding: 0.75em;
   text-align: start;
 }
 
-#station-header {
-  font-size: 2rem;
+table {
+  padding: 0em 0em 0.5em 0em;
+}
+
+.station-header th {
+  font-size: 1.75rem;
   font-weight: 300;
-  margin: 0em 0em 0.5em 0em;
-}
-
-.station-name, .destination {
-  margin-left: 0.8em;
-}
-
-.departure {
-  margin-bottom: 0.8em;
+  padding: 0em 0em 0.5em 0em;
 }
 
 </style>

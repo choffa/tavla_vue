@@ -1,0 +1,756 @@
+{
+    "stopPlaces": [
+        {
+            "transportMode": "bus",
+            "transportSubmode": null,
+            "id": "NSR:StopPlace:25944",
+            "name": "Røyneberg",
+            "estimatedCalls": [
+                {
+                    "realtime": false,
+                    "aimedDepartureTime": "2019-10-29T15:52:00+0100",
+                    "expectedDepartureTime": "2019-10-29T15:52:00+0100",
+                    "actualDepartureTime": null,
+                    "destinationDisplay": {
+                        "frontText": "Stavanger Airport via Forum"
+                    },
+                    "serviceJourney": {
+                        "journeyPattern": {
+                            "line": {
+                                "id": "KOL:Line:2900_242",
+                                "name": "Flybussen",
+                                "transportMode": "bus"
+                            }
+                        }
+                    }
+                },
+                {
+                    "realtime": false,
+                    "aimedDepartureTime": "2019-10-29T16:07:00+0100",
+                    "expectedDepartureTime": "2019-10-29T16:07:00+0100",
+                    "actualDepartureTime": null,
+                    "destinationDisplay": {
+                        "frontText": "Sola - UiS øst - Stavanger"
+                    },
+                    "serviceJourney": {
+                        "journeyPattern": {
+                            "line": {
+                                "id": "KOL:Line:1008_242",
+                                "name": "7",
+                                "transportMode": "bus"
+                            }
+                        }
+                    }
+                },
+                {
+                    "realtime": false,
+                    "aimedDepartureTime": "2019-10-29T16:09:00+0100",
+                    "expectedDepartureTime": "2019-10-29T16:09:00+0100",
+                    "actualDepartureTime": null,
+                    "destinationDisplay": {
+                        "frontText": "Stavanger Airport via SUS and UiS"
+                    },
+                    "serviceJourney": {
+                        "journeyPattern": {
+                            "line": {
+                                "id": "KOL:Line:2900_242",
+                                "name": "Flybussen",
+                                "transportMode": "bus"
+                            }
+                        }
+                    }
+                },
+                {
+                    "realtime": true,
+                    "aimedDepartureTime": "2019-10-29T16:09:00+0100",
+                    "expectedDepartureTime": "2019-10-29T16:09:00+0100",
+                    "actualDepartureTime": null,
+                    "destinationDisplay": {
+                        "frontText": "UiS øst - Sola - Skadberg"
+                    },
+                    "serviceJourney": {
+                        "journeyPattern": {
+                            "line": {
+                                "id": "KOL:Line:1008_242",
+                                "name": "7",
+                                "transportMode": "bus"
+                            }
+                        }
+                    }
+                },
+                {
+                    "realtime": false,
+                    "aimedDepartureTime": "2019-10-29T16:12:00+0100",
+                    "expectedDepartureTime": "2019-10-29T16:12:00+0100",
+                    "actualDepartureTime": null,
+                    "destinationDisplay": {
+                        "frontText": "Sola - UiS øst - Stavanger"
+                    },
+                    "serviceJourney": {
+                        "journeyPattern": {
+                            "line": {
+                                "id": "KOL:Line:1008_242",
+                                "name": "7",
+                                "transportMode": "bus"
+                            }
+                        }
+                    }
+                },
+                {
+                    "realtime": true,
+                    "aimedDepartureTime": "2019-10-29T16:13:00+0100",
+                    "expectedDepartureTime": "2019-10-29T16:13:00+0100",
+                    "actualDepartureTime": null,
+                    "destinationDisplay": {
+                        "frontText": "SUS - Sola - Skadberg"
+                    },
+                    "serviceJourney": {
+                        "journeyPattern": {
+                            "line": {
+                                "id": "KOL:Line:1032_242",
+                                "name": "X50",
+                                "transportMode": "bus"
+                            }
+                        }
+                    }
+                },
+                {
+                    "realtime": false,
+                    "aimedDepartureTime": "2019-10-29T16:22:00+0100",
+                    "expectedDepartureTime": "2019-10-29T16:22:00+0100",
+                    "actualDepartureTime": null,
+                    "destinationDisplay": {
+                        "frontText": "Stavanger Airport via Forum"
+                    },
+                    "serviceJourney": {
+                        "journeyPattern": {
+                            "line": {
+                                "id": "KOL:Line:2900_242",
+                                "name": "Flybussen",
+                                "transportMode": "bus"
+                            }
+                        }
+                    }
+                },
+                {
+                    "realtime": false,
+                    "aimedDepartureTime": "2019-10-29T16:37:00+0100",
+                    "expectedDepartureTime": "2019-10-29T16:37:00+0100",
+                    "actualDepartureTime": null,
+                    "destinationDisplay": {
+                        "frontText": "Sola - UiS øst - Stavanger"
+                    },
+                    "serviceJourney": {
+                        "journeyPattern": {
+                            "line": {
+                                "id": "KOL:Line:1008_242",
+                                "name": "7",
+                                "transportMode": "bus"
+                            }
+                        }
+                    }
+                },
+                {
+                    "realtime": false,
+                    "aimedDepartureTime": "2019-10-29T16:39:00+0100",
+                    "expectedDepartureTime": "2019-10-29T16:39:00+0100",
+                    "actualDepartureTime": null,
+                    "destinationDisplay": {
+                        "frontText": "Stavanger Airport via SUS and UiS"
+                    },
+                    "serviceJourney": {
+                        "journeyPattern": {
+                            "line": {
+                                "id": "KOL:Line:2900_242",
+                                "name": "Flybussen",
+                                "transportMode": "bus"
+                            }
+                        }
+                    }
+                },
+                {
+                    "realtime": false,
+                    "aimedDepartureTime": "2019-10-29T16:39:00+0100",
+                    "expectedDepartureTime": "2019-10-29T16:39:00+0100",
+                    "actualDepartureTime": null,
+                    "destinationDisplay": {
+                        "frontText": "UiS øst - Sola - Skadberg"
+                    },
+                    "serviceJourney": {
+                        "journeyPattern": {
+                            "line": {
+                                "id": "KOL:Line:1008_242",
+                                "name": "7",
+                                "transportMode": "bus"
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "transportMode": "bus",
+            "transportSubmode": null,
+            "id": "NSR:StopPlace:44085",
+            "name": "Gløshaugen syd",
+            "estimatedCalls": [
+                {
+                    "realtime": false,
+                    "aimedDepartureTime": "2019-10-29T15:51:00+0100",
+                    "expectedDepartureTime": "2019-10-29T15:51:00+0100",
+                    "actualDepartureTime": null,
+                    "destinationDisplay": {
+                        "frontText": "Vestlia via Othilienborg"
+                    },
+                    "serviceJourney": {
+                        "journeyPattern": {
+                            "line": {
+                                "id": "ATB:Line:0022-2019-08-10",
+                                "name": "Vestlia- Othilienborg- Sentrum",
+                                "transportMode": "bus"
+                            }
+                        }
+                    }
+                },
+                {
+                    "realtime": false,
+                    "aimedDepartureTime": "2019-10-29T15:52:00+0100",
+                    "expectedDepartureTime": "2019-10-29T15:52:00+0100",
+                    "actualDepartureTime": null,
+                    "destinationDisplay": {
+                        "frontText": "Halllset via sentrum"
+                    },
+                    "serviceJourney": {
+                        "journeyPattern": {
+                            "line": {
+                                "id": "ATB:Line:0003-2019-08-10",
+                                "name": "Lohove- Sentrum- Hallset",
+                                "transportMode": "bus"
+                            }
+                        }
+                    }
+                },
+                {
+                    "realtime": false,
+                    "aimedDepartureTime": "2019-10-29T15:57:00+0100",
+                    "expectedDepartureTime": "2019-10-29T15:57:00+0100",
+                    "actualDepartureTime": null,
+                    "destinationDisplay": {
+                        "frontText": "Lohove"
+                    },
+                    "serviceJourney": {
+                        "journeyPattern": {
+                            "line": {
+                                "id": "ATB:Line:0003-2019-08-10",
+                                "name": "Lohove- Sentrum- Hallset",
+                                "transportMode": "bus"
+                            }
+                        }
+                    }
+                },
+                {
+                    "realtime": false,
+                    "aimedDepartureTime": "2019-10-29T15:58:00+0100",
+                    "expectedDepartureTime": "2019-10-29T15:58:00+0100",
+                    "actualDepartureTime": null,
+                    "destinationDisplay": {
+                        "frontText": "Tyholt via sentrum"
+                    },
+                    "serviceJourney": {
+                        "journeyPattern": {
+                            "line": {
+                                "id": "ATB:Line:0022-2019-08-10",
+                                "name": "Vestlia- Othilienborg- Sentrum",
+                                "transportMode": "bus"
+                            }
+                        }
+                    }
+                },
+                {
+                    "realtime": false,
+                    "aimedDepartureTime": "2019-10-29T15:59:00+0100",
+                    "expectedDepartureTime": "2019-10-29T15:59:00+0100",
+                    "actualDepartureTime": null,
+                    "destinationDisplay": {
+                        "frontText": "Halllset via sentrum"
+                    },
+                    "serviceJourney": {
+                        "journeyPattern": {
+                            "line": {
+                                "id": "ATB:Line:0003-2019-08-10",
+                                "name": "Lohove- Sentrum- Hallset",
+                                "transportMode": "bus"
+                            }
+                        }
+                    }
+                },
+                {
+                    "realtime": false,
+                    "aimedDepartureTime": "2019-10-29T16:01:00+0100",
+                    "expectedDepartureTime": "2019-10-29T16:01:00+0100",
+                    "actualDepartureTime": null,
+                    "destinationDisplay": {
+                        "frontText": "Vestlia via Othilienborg"
+                    },
+                    "serviceJourney": {
+                        "journeyPattern": {
+                            "line": {
+                                "id": "ATB:Line:0022-2019-08-10",
+                                "name": "Vestlia- Othilienborg- Sentrum",
+                                "transportMode": "bus"
+                            }
+                        }
+                    }
+                },
+                {
+                    "realtime": false,
+                    "aimedDepartureTime": "2019-10-29T16:04:00+0100",
+                    "expectedDepartureTime": "2019-10-29T16:04:00+0100",
+                    "actualDepartureTime": null,
+                    "destinationDisplay": {
+                        "frontText": "Lohove"
+                    },
+                    "serviceJourney": {
+                        "journeyPattern": {
+                            "line": {
+                                "id": "ATB:Line:0003-2019-08-10",
+                                "name": "Lohove- Sentrum- Hallset",
+                                "transportMode": "bus"
+                            }
+                        }
+                    }
+                },
+                {
+                    "realtime": false,
+                    "aimedDepartureTime": "2019-10-29T16:07:00+0100",
+                    "expectedDepartureTime": "2019-10-29T16:07:00+0100",
+                    "actualDepartureTime": null,
+                    "destinationDisplay": {
+                        "frontText": "Halllset via sentrum"
+                    },
+                    "serviceJourney": {
+                        "journeyPattern": {
+                            "line": {
+                                "id": "ATB:Line:0003-2019-08-10",
+                                "name": "Lohove- Sentrum- Hallset",
+                                "transportMode": "bus"
+                            }
+                        }
+                    }
+                },
+                {
+                    "realtime": false,
+                    "aimedDepartureTime": "2019-10-29T16:08:00+0100",
+                    "expectedDepartureTime": "2019-10-29T16:08:00+0100",
+                    "actualDepartureTime": null,
+                    "destinationDisplay": {
+                        "frontText": "Tyholt via sentrum"
+                    },
+                    "serviceJourney": {
+                        "journeyPattern": {
+                            "line": {
+                                "id": "ATB:Line:0022-2019-08-10",
+                                "name": "Vestlia- Othilienborg- Sentrum",
+                                "transportMode": "bus"
+                            }
+                        }
+                    }
+                },
+                {
+                    "realtime": false,
+                    "aimedDepartureTime": "2019-10-29T16:11:00+0100",
+                    "expectedDepartureTime": "2019-10-29T16:11:00+0100",
+                    "actualDepartureTime": null,
+                    "destinationDisplay": {
+                        "frontText": "Vestlia via Othilienborg"
+                    },
+                    "serviceJourney": {
+                        "journeyPattern": {
+                            "line": {
+                                "id": "ATB:Line:0022-2019-08-10",
+                                "name": "Vestlia- Othilienborg- Sentrum",
+                                "transportMode": "bus"
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "transportMode": "unknown",
+            "transportSubmode": null,
+            "id": "NSR:StopPlace:58366",
+            "name": "Jernbanetorget",
+            "estimatedCalls": [
+                {
+                    "realtime": true,
+                    "aimedDepartureTime": "2019-10-29T15:43:00+0100",
+                    "expectedDepartureTime": "2019-10-29T15:49:38+0100",
+                    "actualDepartureTime": null,
+                    "destinationDisplay": {
+                        "frontText": "Tåsen"
+                    },
+                    "serviceJourney": {
+                        "journeyPattern": {
+                            "line": {
+                                "id": "RUT:Line:34",
+                                "name": "Tåsen - Ekeberg hageby",
+                                "transportMode": "bus"
+                            }
+                        }
+                    }
+                },
+                {
+                    "realtime": true,
+                    "aimedDepartureTime": "2019-10-29T15:43:00+0100",
+                    "expectedDepartureTime": "2019-10-29T15:50:43+0100",
+                    "actualDepartureTime": null,
+                    "destinationDisplay": {
+                        "frontText": "Helsfyr"
+                    },
+                    "serviceJourney": {
+                        "journeyPattern": {
+                            "line": {
+                                "id": "RUT:Line:37",
+                                "name": "Nydalen T - Helsfyr",
+                                "transportMode": "bus"
+                            }
+                        }
+                    }
+                },
+                {
+                    "realtime": true,
+                    "aimedDepartureTime": "2019-10-29T15:49:00+0100",
+                    "expectedDepartureTime": "2019-10-29T15:50:56+0100",
+                    "actualDepartureTime": null,
+                    "destinationDisplay": {
+                        "frontText": "Bergkrystallen"
+                    },
+                    "serviceJourney": {
+                        "journeyPattern": {
+                            "line": {
+                                "id": "RUT:Line:1",
+                                "name": "Frognerseteren - Bergkrystallen",
+                                "transportMode": "metro"
+                            }
+                        }
+                    }
+                },
+                {
+                    "realtime": true,
+                    "aimedDepartureTime": "2019-10-29T15:51:00+0100",
+                    "expectedDepartureTime": "2019-10-29T15:51:00+0100",
+                    "actualDepartureTime": null,
+                    "destinationDisplay": {
+                        "frontText": "Majorstuen"
+                    },
+                    "serviceJourney": {
+                        "journeyPattern": {
+                            "line": {
+                                "id": "RUT:Line:12",
+                                "name": "Majorstuen - Storo-Grefsen st.",
+                                "transportMode": "tram"
+                            }
+                        }
+                    }
+                },
+                {
+                    "realtime": true,
+                    "aimedDepartureTime": "2019-10-29T15:51:00+0100",
+                    "expectedDepartureTime": "2019-10-29T15:51:00+0100",
+                    "actualDepartureTime": "2019-10-29T15:51:00+0100",
+                    "destinationDisplay": {
+                        "frontText": "Åsbråten"
+                    },
+                    "serviceJourney": {
+                        "journeyPattern": {
+                            "line": {
+                                "id": "RUT:Line:80",
+                                "name": "Jernbanetorget - Åsbråten",
+                                "transportMode": "bus"
+                            }
+                        }
+                    }
+                },
+                {
+                    "realtime": true,
+                    "aimedDepartureTime": "2019-10-29T15:49:00+0100",
+                    "expectedDepartureTime": "2019-10-29T15:51:17+0100",
+                    "actualDepartureTime": null,
+                    "destinationDisplay": {
+                        "frontText": "Tåsen"
+                    },
+                    "serviceJourney": {
+                        "journeyPattern": {
+                            "line": {
+                                "id": "RUT:Line:34",
+                                "name": "Tåsen - Ekeberg hageby",
+                                "transportMode": "bus"
+                            }
+                        }
+                    }
+                },
+                {
+                    "realtime": true,
+                    "aimedDepartureTime": "2019-10-29T15:48:00+0100",
+                    "expectedDepartureTime": "2019-10-29T15:51:34+0100",
+                    "actualDepartureTime": null,
+                    "destinationDisplay": {
+                        "frontText": "Vippetangen"
+                    },
+                    "serviceJourney": {
+                        "journeyPattern": {
+                            "line": {
+                                "id": "RUT:Line:60",
+                                "name": "Vippetangen - Tonsenhagen",
+                                "transportMode": "bus"
+                            }
+                        }
+                    }
+                },
+                {
+                    "realtime": true,
+                    "aimedDepartureTime": "2019-10-29T15:40:00+0100",
+                    "expectedDepartureTime": "2019-10-29T15:51:58+0100",
+                    "actualDepartureTime": null,
+                    "destinationDisplay": {
+                        "frontText": "Skullerud T"
+                    },
+                    "serviceJourney": {
+                        "journeyPattern": {
+                            "line": {
+                                "id": "RUT:Line:70",
+                                "name": "Nationaltheatret - Skullerud T",
+                                "transportMode": "bus"
+                            }
+                        }
+                    }
+                },
+                {
+                    "realtime": true,
+                    "aimedDepartureTime": "2019-10-29T15:47:00+0100",
+                    "expectedDepartureTime": "2019-10-29T15:52:02+0100",
+                    "actualDepartureTime": null,
+                    "destinationDisplay": {
+                        "frontText": "Rikshospitalet"
+                    },
+                    "serviceJourney": {
+                        "journeyPattern": {
+                            "line": {
+                                "id": "RUT:Line:17",
+                                "name": "Rikshospitalet - Grefsen st.",
+                                "transportMode": "tram"
+                            }
+                        }
+                    }
+                },
+                {
+                    "realtime": true,
+                    "aimedDepartureTime": "2019-10-29T15:48:00+0100",
+                    "expectedDepartureTime": "2019-10-29T15:52:05+0100",
+                    "actualDepartureTime": null,
+                    "destinationDisplay": {
+                        "frontText": "Skullerud T"
+                    },
+                    "serviceJourney": {
+                        "journeyPattern": {
+                            "line": {
+                                "id": "RUT:Line:70",
+                                "name": "Nationaltheatret - Skullerud T",
+                                "transportMode": "bus"
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "transportMode": "unknown",
+            "transportSubmode": null,
+            "id": "NSR:StopPlace:58195",
+            "name": "Storo",
+            "estimatedCalls": [
+                {
+                    "realtime": true,
+                    "aimedDepartureTime": "2019-10-29T15:50:00+0100",
+                    "expectedDepartureTime": "2019-10-29T15:50:00+0100",
+                    "actualDepartureTime": null,
+                    "destinationDisplay": {
+                        "frontText": "Kjelsås"
+                    },
+                    "serviceJourney": {
+                        "journeyPattern": {
+                            "line": {
+                                "id": "RUT:Line:3011",
+                                "name": "Buss for linje 11",
+                                "transportMode": "bus"
+                            }
+                        }
+                    }
+                },
+                {
+                    "realtime": true,
+                    "aimedDepartureTime": "2019-10-29T15:50:00+0100",
+                    "expectedDepartureTime": "2019-10-29T15:50:35+0100",
+                    "actualDepartureTime": null,
+                    "destinationDisplay": {
+                        "frontText": "Nydalen"
+                    },
+                    "serviceJourney": {
+                        "journeyPattern": {
+                            "line": {
+                                "id": "RUT:Line:56",
+                                "name": "Nydalen - Solemskogen",
+                                "transportMode": "bus"
+                            }
+                        }
+                    }
+                },
+                {
+                    "realtime": true,
+                    "aimedDepartureTime": "2019-10-29T15:42:00+0100",
+                    "expectedDepartureTime": "2019-10-29T15:50:36+0100",
+                    "actualDepartureTime": null,
+                    "destinationDisplay": {
+                        "frontText": "Storo-Grefsen st."
+                    },
+                    "serviceJourney": {
+                        "journeyPattern": {
+                            "line": {
+                                "id": "RUT:Line:12",
+                                "name": "Majorstuen - Storo-Grefsen st.",
+                                "transportMode": "tram"
+                            }
+                        }
+                    }
+                },
+                {
+                    "realtime": true,
+                    "aimedDepartureTime": "2019-10-29T15:48:00+0100",
+                    "expectedDepartureTime": "2019-10-29T15:50:46+0100",
+                    "actualDepartureTime": null,
+                    "destinationDisplay": {
+                        "frontText": "Fornebu"
+                    },
+                    "serviceJourney": {
+                        "journeyPattern": {
+                            "line": {
+                                "id": "RUT:Line:24",
+                                "name": "Fornebu vest - Brynseng T",
+                                "transportMode": "bus"
+                            }
+                        }
+                    }
+                },
+                {
+                    "realtime": true,
+                    "aimedDepartureTime": "2019-10-29T15:43:00+0100",
+                    "expectedDepartureTime": "2019-10-29T15:51:16+0100",
+                    "actualDepartureTime": null,
+                    "destinationDisplay": {
+                        "frontText": "Lysaker"
+                    },
+                    "serviceJourney": {
+                        "journeyPattern": {
+                            "line": {
+                                "id": "RUT:Line:23",
+                                "name": "Lysaker - Simensbråten",
+                                "transportMode": "bus"
+                            }
+                        }
+                    }
+                },
+                {
+                    "realtime": true,
+                    "aimedDepartureTime": "2019-10-29T15:52:00+0100",
+                    "expectedDepartureTime": "2019-10-29T15:52:00+0100",
+                    "actualDepartureTime": null,
+                    "destinationDisplay": {
+                        "frontText": "Lilleaker"
+                    },
+                    "serviceJourney": {
+                        "journeyPattern": {
+                            "line": {
+                                "id": "RUT:Line:13",
+                                "name": "Bekkestua - Storo-Grefsen st.",
+                                "transportMode": "tram"
+                            }
+                        }
+                    }
+                },
+                {
+                    "realtime": true,
+                    "aimedDepartureTime": "2019-10-29T15:42:00+0100",
+                    "expectedDepartureTime": "2019-10-29T15:52:24+0100",
+                    "actualDepartureTime": null,
+                    "destinationDisplay": {
+                        "frontText": "Bekkestua"
+                    },
+                    "serviceJourney": {
+                        "journeyPattern": {
+                            "line": {
+                                "id": "RUT:Line:13",
+                                "name": "Bekkestua - Storo-Grefsen st.",
+                                "transportMode": "tram"
+                            }
+                        }
+                    }
+                },
+                {
+                    "realtime": true,
+                    "aimedDepartureTime": "2019-10-29T15:53:00+0100",
+                    "expectedDepartureTime": "2019-10-29T15:54:21+0100",
+                    "actualDepartureTime": null,
+                    "destinationDisplay": {
+                        "frontText": "Brynseng T"
+                    },
+                    "serviceJourney": {
+                        "journeyPattern": {
+                            "line": {
+                                "id": "RUT:Line:24",
+                                "name": "Fornebu vest - Brynseng T",
+                                "transportMode": "bus"
+                            }
+                        }
+                    }
+                },
+                {
+                    "realtime": true,
+                    "aimedDepartureTime": "2019-10-29T15:52:00+0100",
+                    "expectedDepartureTime": "2019-10-29T15:54:22+0100",
+                    "actualDepartureTime": null,
+                    "destinationDisplay": {
+                        "frontText": "Storo-Grefsen st."
+                    },
+                    "serviceJourney": {
+                        "journeyPattern": {
+                            "line": {
+                                "id": "RUT:Line:12",
+                                "name": "Majorstuen - Storo-Grefsen st.",
+                                "transportMode": "tram"
+                            }
+                        }
+                    }
+                },
+                {
+                    "realtime": true,
+                    "aimedDepartureTime": "2019-10-29T15:54:00+0100",
+                    "expectedDepartureTime": "2019-10-29T15:55:00+0100",
+                    "actualDepartureTime": null,
+                    "destinationDisplay": {
+                        "frontText": "Sognsvann via Tøyen"
+                    },
+                    "serviceJourney": {
+                        "journeyPattern": {
+                            "line": {
+                                "id": "RUT:Line:5",
+                                "name": "Sognsvann - Vestli",
+                                "transportMode": "metro"
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
