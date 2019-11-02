@@ -6,7 +6,7 @@
 
 <script>
 
-import data from '../data/mock.json'
+import mock from '../data/mock.json'
 import DepartureBoard from './DepartureBoard.vue'
 
 export default {
@@ -17,17 +17,20 @@ export default {
 
   data() {
     return {
-      stopPlaces: data.stopPlaces
+      stopPlaces: mock.data.stopPlaces
     }
   },
 }
 </script>
 
-<style scoped>
+<style>
 
 #boards-container {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  overflow: auto;
+  margin: 1em;
+  color: red;
 }
 
 </style>

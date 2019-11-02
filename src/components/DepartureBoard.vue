@@ -2,32 +2,20 @@
 <div id="container">
   <table>
     <tr class="station-header">
-      <th><font-awesome-icon icon="bus" /></th>
-      <th>{{ stopPlace.name }}</th>
+      <!-- <th><font-awesome-icon icon="bus" /></th> -->
+      <th class="stop-place" colspan="3">{{ stopPlace.name }}</th>
     </tr>
     <tr v-for="(call, idx) in stopPlace.estimatedCalls" :key="idx">
-      <td>{{ getTime(call) }}</td>
+      <td>{{ call.serviceJourney.journeyPattern.line.publicCode }}</td>
       <td>{{ call.destinationDisplay.frontText }}</td>
+      <td>{{ getTime(call) }}</td>
     </tr>
   </table>
 </div>
 </template>
 
 <script>
-import { ZonedDateTime, DateTimeFormatter } from '@js-joda/core';
-
-function getTime(call) {
-  const format = DateTimeFormatter.ofPattern(
-    "yyyy-MM-dd'T'HH:mm:ssZ"
-  );
-  const time = ZonedDateTime.parse(
-    call.actualDepartureTime ||
-    call.expectedDepartureTime ||
-    call.aimedDepartureTime,
-    format
-  );
-  return time.format(DateTimeFormatter.ofPattern('HH:mm'));
-}
+import { ZonedDateTime, DateTimeFormatter, Duration } from '@js-joda/core';
 
 export default {
   props: {
@@ -37,7 +25,28 @@ export default {
     },
   },
   methods: {
-    getTime: getTime,
+    getTime(call) {
+      const format = DateTimeFormatter.ofPattern(
+        "yyyy-MM-dd'T'HH:mm:ssZ"
+      );
+      //TODO: Use actual time when using actual data
+      const now = ZonedDateTime.parse("2019-10-31T15:16:00+0100", format);
+      const time = ZonedDateTime.parse(
+        call.actualDepartureTime ||
+        call.expectedDepartureTime ||
+        call.aimedDepartureTime,
+        format
+      );
+      const delta = Duration.between(now, time).toMinutes();
+      
+      if (delta < 1) {
+        return "now";
+      } else if (delta <= 10) {
+        return `${delta} min`;
+      } else {
+        return time.format(DateTimeFormatter.ofPattern('HH:mm'));
+      }
+    },
   },
 }
 </script>
@@ -46,15 +55,20 @@ export default {
 
 #container {
   background: rgb(12, 100, 12);
-  max-width: 20em;
-  max-height: 25em;
   color: floralwhite;
   padding: 0.75em;
+  margin-right: 1em;
+  margin-bottom: 1em;
   text-align: start;
 }
 
 table {
   padding: 0em 0em 0.5em 0em;
+  white-space: nowrap;
+}
+
+td {
+  padding: 0.25em;
 }
 
 .station-header th {
