@@ -29,8 +29,7 @@ export default {
       const format = DateTimeFormatter.ofPattern(
         "yyyy-MM-dd'T'HH:mm:ssZ"
       );
-      //TODO: Use actual time when using actual data
-      const now = ZonedDateTime.parse("2019-10-31T15:16:00+0100", format);
+      const now = ZonedDateTime.now();
       const time = ZonedDateTime.parse(
         call.actualDepartureTime ||
         call.expectedDepartureTime ||

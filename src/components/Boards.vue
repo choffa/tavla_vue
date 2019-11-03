@@ -6,8 +6,8 @@
 
 <script>
 
-import mock from '../data/mock.json'
 import DepartureBoard from './DepartureBoard.vue'
+import { GET_REALTIME_DATA } from "../graphql/queries"
 
 export default {
   name: 'boards',
@@ -17,8 +17,15 @@ export default {
 
   data() {
     return {
-      stopPlaces: mock.data.stopPlaces
+      stopPlaces: null,
     }
+  },
+
+  apollo: {
+    stopPlaces: {
+      query: GET_REALTIME_DATA,
+      pollInterval: 30000,
+    },
   },
 }
 </script>
