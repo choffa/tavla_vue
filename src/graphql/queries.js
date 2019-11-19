@@ -19,6 +19,7 @@ query getRealtimeData {
         frontText
       }
       serviceJourney {
+        id
         journeyPattern {
           line {
             id

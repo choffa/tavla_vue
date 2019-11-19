@@ -7,7 +7,7 @@
 <script>
 
 import DepartureBoard from './DepartureBoard.vue'
-import { GET_REALTIME_DATA } from "../graphql/queries"
+import { GET_REALTIME_DATA } from "@/graphql/queries"
 
 export default {
   name: 'boards',

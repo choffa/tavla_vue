@@ -14,7 +14,9 @@
     "@js-joda/core": "^1.12.0",
     "core-js": "^2.6.5",
     "vue": "^2.6.10",
-    "vue-apollo": "^3.0.0-beta.11"
+    "vue-apollo": "^3.0.0-beta.11",
+    "vue-router": "^3.0.3",
+    "vue-timers": "^2.0.4"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.10.0",
