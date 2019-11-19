@@ -28,4 +28,9 @@ export default {
   /* margin-top: 60px; */
 }
 
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
 </style>
