@@ -1,8 +1,8 @@
 <template>
   <div id="header">
-    <button class="btn"><font-awesome-icon icon="arrow-left" /></button>
+    <button class="btn">Back</button>
     <span id="clock">{{ time }}</span>
-    <button class="btn"><font-awesome-icon icon="cog" /></button>
+    <button class="btn">Settings</button>
   </div>
 </template>
 

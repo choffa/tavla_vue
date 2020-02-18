@@ -5,14 +5,8 @@ import VueApollo from 'vue-apollo'
 import { ApolloClient } from "apollo-client";
 import { createHttpLink } from "apollo-link-http";
 import { InMemoryCache } from "apollo-cache-inmemory";
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faBus, faArrowLeft, faCog } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 // import { createProvider } from './vue-apollo'
 
-library.add([faBus, faArrowLeft, faCog]);
-
-Vue.component('font-awesome-icon', FontAwesomeIcon);
 Vue.use(VueApollo);
 Vue.config.productionTip = false;
 
