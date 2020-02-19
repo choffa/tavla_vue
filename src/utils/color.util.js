@@ -52,6 +52,11 @@ const getKolumbusColor = (number, presentation) => {
         colour: 'FFFFFF',
         textColour: '000000'
       }
+    case '2900_245':
+      return {
+        colour: 'FFFFFF',
+        textColour: '000000'
+      }
     default:
       return presentation.colour ? presentation : {
         colour: '4A8618',
