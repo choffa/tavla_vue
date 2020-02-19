@@ -6,7 +6,7 @@
       :style="lineIndicatorStyle"
     >{{ estimatedCall.serviceJourney.line.publicCode }}</span>
     <span class="destination txt">{{ estimatedCall.destinationDisplay.frontText }}</span>
-    <span class="time txt">{{ departureTime }}</span>
+    <span class="time txt">{{ departureTime() }}</span>
   </div>
 </template>
 
@@ -24,19 +24,6 @@ export default {
   },
 
   computed: {
-    departureTime() {
-      const format = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ssZ");
-      const now = ZonedDateTime.now();
-      const depTime = ZonedDateTime.parse(
-        this.estimatedCall.expectedDepartureTime ||
-          this.estimatedCall.aimedDepartureTime,
-        format
-      );
-      const delta = Duration.between(now, depTime).toMinutes();
-      const time = this.formatTime(delta, depTime);
-
-      return this.estimatedCall.realtime ? time : "ca " + time;
-    },
     lineIndicatorStyle() {
       const presentation = getLineColor(
         this.estimatedCall.serviceJourney.line.id,
@@ -67,6 +54,24 @@ export default {
       } else {
         return depTime.format(DateTimeFormatter.ofPattern("HH:mm"));
       }
+    },
+    // Cannot be computed, because now is not reactive
+    // so would only change if absolute time changed
+    // could change so that now is computed as a timer
+    // in parent or grandparent, and then send down to children
+    // however, for now, this is fine...
+    departureTime() {
+      const now = ZonedDateTime.now();
+      const format = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ssZ");
+      const depTime = ZonedDateTime.parse(
+        this.estimatedCall.expectedDepartureTime ||
+          this.estimatedCall.aimedDepartureTime,
+        format
+      );
+      const delta = Duration.between(now, depTime).toMinutes();
+      const time = this.formatTime(delta, depTime);
+
+      return this.estimatedCall.realtime ? time : "ca " + time;
     }
   }
 };
