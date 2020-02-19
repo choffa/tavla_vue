@@ -11,5 +11,10 @@ if (unsetEnv.length > 0) {
 module.exports = {
   configureWebpack: {
     devtool: 'source-map'
+  },
+  pluginOptions: {
+    apollo: {
+      lintGQL: true
+    }
   }
 }
