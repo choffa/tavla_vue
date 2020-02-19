@@ -1,7 +1,6 @@
 <template>
   <div class="row">
-    <!-- <i class="material-icons txt">{{ estimatedCall.serviceJourney.line.transportMode }}</i> -->
-    <i class="material-icons txt">directions_bus</i>
+    <img class="txt icon" :src="icon" alt="mode" />
     <span
       class="line txt"
       :style="lineIndicatorStyle"
@@ -13,7 +12,8 @@
 
 <script>
 import { ZonedDateTime, DateTimeFormatter, Duration } from "@js-joda/core";
-import { getLineColor } from "@/util/lineColor.util.js";
+import { getLineColor } from "@/utils/color.util.js";
+import { getIcon } from "@/utils/icon.util.js";
 
 export default {
   props: {
@@ -42,12 +42,19 @@ export default {
         this.estimatedCall.serviceJourney.line.id,
         this.estimatedCall.serviceJourney.line.presentation
       );
-      const border = !presentation.colour || presentation.colour === 'FFFFFF';
+      const border = !presentation.colour || presentation.colour === "FFFFFF";
       return {
         backgroundColor: "#" + presentation.colour,
         color: "#" + presentation.textColour,
-        border: border ? "" :"none",
+        border: border ? "" : "none"
       };
+    },
+    icon() {
+      const icons = require.context("@/assets/icons", false, /\.svg$/);
+      const icon = getIcon(
+        this.estimatedCall.serviceJourney.line.transportMode
+      );
+      return icons("./" + icon + ".svg");
     }
   },
 
@@ -73,6 +80,10 @@ export default {
 
 .row:not(:last-child) {
   border-bottom: 1px solid rgba(1, 1, 1, 0.25);
+}
+
+.icon {
+  height: 1.75rem;
 }
 
 .txt {

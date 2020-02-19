@@ -5,7 +5,6 @@
 </template>
 
 <script>
-// import DepartureBoard from './DepartureBoard.vue'
 import DepartureBoard from "@/components/boards/DepartureBoard.vue";
 import { GET_REALTIME_DATA } from "@/graphql/queries";
 
