@@ -6,28 +6,30 @@ query getRealtimeData {
     		"NSR:StopPlace:25944", 
     		"NSR:StopPlace:44085", 
     		"NSR:StopPlace:58366",
-  			"NSR:StopPlace:58195"]) {
-    transportMode
+  			"NSR:StopPlace:58195"
+  ]) {
     id
     name
     estimatedCalls(timeRange: 72100, numberOfDepartures: 10, omitNonBoarding: true) {
       realtime
       aimedDepartureTime
       expectedDepartureTime
-      actualDepartureTime
       destinationDisplay {
-        frontText
+        frontText      
       }
       serviceJourney {
         id
-        journeyPattern {
-          line {
-            id
-            transportMode
-            publicCode
+        line {
+          id
+          transportMode
+          publicCode
+          presentation {
+            colour
+            textColour
           }
         }
       }
     }
   }
-}`;
+}
+`;
