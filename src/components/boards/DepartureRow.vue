@@ -102,7 +102,7 @@ export default {
 
 .destination {
   margin-right: auto;
-  text-align: start;
+  text-align: left;
   max-width: 12em;
   display: inline-block;
 }
