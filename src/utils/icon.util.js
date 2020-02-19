@@ -1,7 +1,7 @@
 
 
 export const getIcon = (mode) => {
-  
+
   switch (mode) {
     case 'air':
       return 'airplane-circle';
@@ -16,9 +16,9 @@ export const getIcon = (mode) => {
     case 'tram':
       return 'tram';
     case 'coach':
-      return 'bus-circle';
+      return 'bus';
     default:
-      return 'questionmark-circle';
+      return 'questionmark';
   }
 
 };
