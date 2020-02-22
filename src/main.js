@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
+import store from './store'
 import router from './router'
 import VueApollo from 'vue-apollo'
 import { ApolloClient } from "apollo-client";
@@ -23,7 +24,8 @@ const apolloClient = new ApolloClient({
 });
 
 new Vue({
-  apolloProvider: new VueApollo({defaultClient: apolloClient}),
+  apolloProvider: new VueApollo({ defaultClient: apolloClient }),
   router,
+  store,
   render: h => h(App)
 }).$mount('#app');
