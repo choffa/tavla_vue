@@ -6,7 +6,7 @@
 
 <script>
 import DepartureBoard from "@/components/boards/DepartureBoard.vue";
-import { GET_REALTIME_DATA } from "@/graphql/queries";
+import REALTIME_DATA from "@/graphql/RealtimeData.gql";
 
 export default {
   name: "boards",
@@ -22,7 +22,7 @@ export default {
 
   apollo: {
     stopPlaces: {
-      query: GET_REALTIME_DATA,
+      query: REALTIME_DATA,
       pollInterval: 30000
     }
   }

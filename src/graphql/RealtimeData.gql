@@ -1,7 +1,4 @@
-import gql from 'graphql-tag'
-
-export const GET_REALTIME_DATA = gql`
-query getRealtimeData {
+query realtimeData {
   stopPlaces(ids: [
     		"NSR:StopPlace:25944", 
     		"NSR:StopPlace:44085", 
@@ -32,4 +29,3 @@ query getRealtimeData {
     }
   }
 }
-`;
