@@ -7,13 +7,13 @@
 
 <script>
 // @ is an alias to /src
-import Boards from '@/components/Boards.vue'
+import Boards from "@/components/boards/Boards.vue";
 // import BoardsHeader from "@/components/BoardsHeader.vue";
 
 export default {
-  name: 'main-view',
+  name: "main-view",
   components: {
     Boards
-  },
-}
+  }
+};
 </script>

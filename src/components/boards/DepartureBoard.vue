@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import Card from "./Card.vue";
+import Card from "@/components/Card.vue";
 import DepartureRow from "./DepartureRow.vue";
 
 export default {

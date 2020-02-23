@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import DepartureBoard from "@/components/boards/DepartureBoard.vue";
+import DepartureBoard from "./DepartureBoard.vue";
 import REALTIME_DATA from "@/graphql/RealtimeData.gql";
 
 export default {
