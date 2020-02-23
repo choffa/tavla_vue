@@ -97,10 +97,10 @@ export default {
 
 .line {
   border: 1px solid rgba(1, 1, 1, 0.5);
-  min-width: 2em;
-  padding: 4px;
+  min-width: calc(1.4rem + (2 * 6px));
+  padding: 4px 6px;
   text-align: center;
-  border-radius: 8px;
+  border-radius: 6px;
   font-weight: 600;
   display: inline-block;
 }
