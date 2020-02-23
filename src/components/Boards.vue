@@ -23,7 +23,15 @@ export default {
   apollo: {
     stopPlaces: {
       query: REALTIME_DATA,
-      pollInterval: 30000
+      pollInterval: 30000,
+      variables: {
+        stops: [
+          "NSR:StopPlace:25944",
+          "NSR:StopPlace:44085",
+          "NSR:StopPlace:58366",
+          "NSR:StopPlace:58195"
+        ]
+      }
     }
   }
 };

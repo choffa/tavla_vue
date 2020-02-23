@@ -1,10 +1,5 @@
-query realtimeData {
-  stopPlaces(ids: [
-    		"NSR:StopPlace:25944", 
-    		"NSR:StopPlace:44085", 
-    		"NSR:StopPlace:58366",
-  			"NSR:StopPlace:58195"
-  ]) {
+query realtimeData($stops: [String]!) {
+  stopPlaces(ids: $stops) {
     id
     name
     estimatedCalls(timeRange: 72100, numberOfDepartures: 10, omitNonBoarding: true) {
