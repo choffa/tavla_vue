@@ -16,6 +16,7 @@
   overflow-y: scroll;
   margin-right: 8px;
   margin-bottom: 8px;
+  scrollbar-width: none;
 }
 
 .card::-webkit-scrollbar {
