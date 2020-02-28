@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-// import MainView from './views/MainView.vue'
+import MainView from './views/MainView.vue'
 import LandingPage from './views/LandingView.vue';
 
 Vue.use(Router)
@@ -9,8 +9,13 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'main',
+      name: 'landing',
       component: LandingPage
+    },
+    {
+      path: '/boards',
+      name: 'boards',
+      component: MainView
     },
     {
       path: '/about',
