@@ -1,71 +1,86 @@
 <template>
-  <div class="wrapper">
+  <div
+    class="wrapper"
+    @keydown.arrow-down="active++"
+    @keydown.arrow-up="active--"
+    @keypress.enter="emitSelect(items[active])"
+  >
     <input
-      class="field"
       type="text"
-      v-model="search"
-      @keydown.arrow-down.prevent="arrow(1)"
-      @keydown.arrow-up.prevent="arrow(-1)"
+      class="field"
+      :value="text"
+      :placeholder="placeholder"
+      @input="emitSearch"
+      @focus="show = true"
     />
-    <div class="autocomplete-items" v-if="items.length > 0" @mouseout="index = -1">
+    <div class="autocomplete-items" v-if="show" @mouseleave="active = -1">
       <div
         class="autocomplete-item"
         v-for="(item, idx) in items"
-        :class="[idx === index ? 'active' : '']"
-        :key="item"
-        @mouseover="index = idx"
-      >{{ item }}</div>
+        :key="idx"
+        :class="{ 'active-item': active === idx }"
+        @mouseenter="active = idx"
+        @click="emitSelect(item)"
+        @keypress.enter="emitSelect(item)"
+      >{{ item.label }}</div>
     </div>
   </div>
 </template>
 
 <script>
+import { debounce } from "lodash";
+
 export default {
-  data() {
-    return {
-      countries: [
-        "United States",
-        "Norway",
-        "Sweden",
-        "United Kingdom",
-        "Denmark",
-        "Finland",
-        "Germany",
-        "Samoa",
-        "Australia",
-        "New Zealand",
-        "Spain"
-      ].sort(),
-      search: "",
-      index: -1
-    };
-  },
-  computed: {
-    items() {
-      return this.search
-        ? this.countries.filter(value =>
-            value.toLowerCase().includes(this.search.toLowerCase())
-          )
-        : [];
+  props: {
+    items: {
+      type: Array,
+      default: () => [
+        { label: "Norway" },
+        { label: "Sweden" },
+        { label: "Denmark" },
+        { label: "Island" },
+        { label: "Finland" },
+        { label: "Estonia" }
+      ]
+    },
+    delay: {
+      type: Number,
+      default: () => 500
+    },
+    placeholder: {
+      type: String,
+      default: () => "Adresse eller sted"
     }
   },
+
+  data() {
+    return {
+      text: "",
+      active: -1,
+      show: false
+    };
+  },
+
+  created() {
+    const vm = this;
+    this.emitSearch = debounce(function(e) {
+      vm.text = e.target.value;
+      vm.$emit("input", vm.text);
+    }, vm.delay);
+  },
+
   methods: {
-    arrow(delta) {
-      const length = this.items.length;
-      const idx = this.index;
-      if (this.items.length) {
-        this.index = (idx + length + delta) % length;
-      } else {
-        this.index = -1;
-      }
+    emitSelect(item) {
+      this.text = item.label;
+      this.show = false;
+      this.$emit("select", item);
     }
   }
 };
 </script>
 
-<style scoped>
+<style>
 .wrapper {
-  /* height: 24px; */
   width: 20rem;
   position: relative;
 }
@@ -86,15 +101,16 @@ export default {
   position: absolute;
   width: 100%;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  z-index: 1000;
   background-color: white;
+  cursor: pointer;
+  user-select: none;
 }
 
 .autocomplete-item:not(:last-child) {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-.active {
+.active-item {
   background-color: #f1f1f1;
 }
 </style>

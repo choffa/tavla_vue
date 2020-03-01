@@ -2,14 +2,15 @@
   <div class="main">
     <h2>Sanntidstavla du kan tilpasse dine egne behov</h2>
     <div class="search-container">
-      <search-field class="search" />
+      <search-field class="search" @input="search" @select="selected = $event" :items="items" />
       <button class="btn" @click="navigate">Opprett tavle</button>
     </div>
     <div class="content">
       <p>For å opprette en tavle trenger appen å vite hvilket område du er interessert i. Lokasjonen din lagres aldri.</p>
       <p>
         Denne appen er inspirert av
-        <a href="https://tavla.entur.no">tavla</a> fra
+        <a href="https://tavla.entur.no">tavla</a>
+        fra
         <a href="http://developer.entur.org">entur</a>.
       </p>
     </div>
@@ -19,14 +20,31 @@
 
 <script>
 import SearchField from "@/components/landingpage/SearchField.vue";
+import { autocomplete } from "../services/geocoder.service";
 
 export default {
   components: {
     SearchField
   },
+  data() {
+    return {
+      items: [],
+      selected: null
+    };
+  },
   methods: {
     navigate() {
       this.$router.push("boards");
+    },
+    search(s) {
+      const vm = this;
+      autocomplete(s)
+        .then(res => {
+          vm.items = res.data.features.map(f =>
+            Object.assign(f, { label: f.properties.label })
+          );
+        })
+        .catch(err => console.log(err)); // eslint-disable-line
     }
   }
 };
