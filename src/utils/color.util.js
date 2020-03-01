@@ -47,16 +47,13 @@ const getRuterColor = (number, presentation) => {
 
 const getKolumbusColor = (number, presentation) => {
   switch (number) {
-    case '-1':
-      return {
-        colour: 'FFFFFF',
-        textColour: '000000'
-      }
     case '2900_245':
+    case '2900_247':
       return {
         colour: 'FFFFFF',
         textColour: '000000'
       }
+
     default:
       return presentation.colour ? presentation : {
         colour: '4A8618',
