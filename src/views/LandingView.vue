@@ -3,7 +3,7 @@
     <h2>Sanntidstavla du kan tilpasse dine egne behov</h2>
     <div class="search-container">
       <search-field class="search" @input="search" @select="selected = $event" :items="items" />
-      <button class="btn" @click="navigate">Opprett tavle</button>
+      <button class="btn" @click="navigate" :disabled="buttonDisabled">Opprett tavle</button>
     </div>
     <div class="content">
       <p>For å opprette en tavle trenger appen å vite hvilket område du er interessert i. Lokasjonen din lagres aldri.</p>
@@ -31,6 +31,11 @@ export default {
       items: [],
       selected: null
     };
+  },
+  computed: {
+    buttonDisabled() {
+      return !this.selected;
+    }
   },
   methods: {
     navigate() {
@@ -76,6 +81,10 @@ export default {
   font-size: 18px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.btn:disabled {
+  background-color: #909090;
 }
 
 .illustration {
