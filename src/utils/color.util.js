@@ -7,6 +7,8 @@ export const getLineColor = (line, presentation) => {
       return getRuterColor(number, presentation);
     case 'KOL':
       return getKolumbusColor(number, presentation);
+    case 'ATB':
+      return getAtBColor(number, presentation);
     default:
       return presentation;
   }
@@ -17,28 +19,28 @@ const getRuterColor = (number, presentation) => {
   switch (number) {
     case '1':
       return {
-        colour: '0073DB',
-        textColour: 'FFFFFF'
+        colour: '0073db',
+        textColour: 'ffffff'
       };
     case '2':
       return {
         colour: 'EC700C',
-        textColour: 'FFFFFF'
+        textColour: 'ffffff'
       };
     case '3':
       return {
-        colour: 'A85FA5',
-        textColour: 'FFFFFF'
+        colour: 'a85fa5',
+        textColour: 'ffffff'
       };
     case '4':
       return {
-        colour: '004A98',
-        textColour: 'FFFFFF'
+        colour: '004a98',
+        textColour: 'ffffff'
       };
     case '5':
       return {
-        colour: '32AA35',
-        textColour: 'FFFFFF'
+        colour: '32aa35',
+        textColour: 'ffffff'
       };
     default:
       return presentation;
@@ -50,14 +52,37 @@ const getKolumbusColor = (number, presentation) => {
     case '2900_245':
     case '2900_247':
       return {
-        colour: 'FFFFFF',
+        colour: 'ffffff',
         textColour: '000000'
       }
 
     default:
       return presentation.colour ? presentation : {
-        colour: '4A8618',
-        textColour: 'FFFFFF'
+        colour: '4a8618',
+        textColour: 'ffffff'
       }
   }
+};
+
+const getAtBColor = (number, presentation) => {
+  if (presentation.colour) return presentation;
+
+  number = number.split('_')[1];
+  if (number <= 3) {
+    return {
+      colour: '37424a',
+      textColour: 'ffffff'
+    }
+  } else if (number <= 100) {
+    return {
+      colour: 'a1ad00',
+      textColour: 'ffffff'
+    }
+  } else {
+    return {
+      colour: '007c92',
+      textColour: 'ffffff'
+    }
+  }
+
 }

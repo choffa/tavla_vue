@@ -32,7 +32,8 @@ export default {
         this.estimatedCall.serviceJourney.line.id,
         this.estimatedCall.serviceJourney.line.presentation
       );
-      const border = !presentation.colour || presentation.colour === "FFFFFF";
+      const border =
+        !presentation.colour || presentation.colour.toLowerCase() === "ffffff";
       return {
         backgroundColor: "#" + presentation.colour,
         color: "#" + presentation.textColour,
@@ -87,22 +88,25 @@ export default {
   border-bottom: 1px solid rgba(1, 1, 1, 0.25);
 }
 
-.icon {
+.icon,
+.line {
   height: 1.75rem;
 }
 
 .txt {
-  margin: 0.5em 0.25em;
+  margin: 0.5rem 0.25rem;
 }
 
 .line {
   border: 1px solid rgba(1, 1, 1, 0.5);
   min-width: calc(1.4rem + (2 * 6px));
-  padding: 4px 6px;
-  text-align: center;
-  border-radius: 6px;
+  padding: 0 0.375rem;
+  border-radius: 0.375rem;
   font-weight: 600;
-  display: inline-block;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .destination {
