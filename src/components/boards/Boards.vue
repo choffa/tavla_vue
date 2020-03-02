@@ -27,9 +27,9 @@ export default {
       variables: {
         stops: [
           "NSR:StopPlace:25944",
-          "NSR:StopPlace:44085",
+          "NSR:StopPlace:60257",
           "NSR:StopPlace:58366",
-          "NSR:StopPlace:58195"
+          "NSR:StopPlace:58545"
         ]
       }
     }
