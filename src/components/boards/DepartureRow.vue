@@ -14,13 +14,14 @@
 import { ZonedDateTime, DateTimeFormatter, Duration } from "@js-joda/core";
 import { getLineColor } from "@/utils/color.util.js";
 import { getIcon } from "@/utils/icon.util.js";
-import { NowMixin } from "@/mixins.js";
 
 export default {
-  mixins: [NowMixin],
-
   props: {
     estimatedCall: {
+      type: Object,
+      required: true
+    },
+    now: {
       type: Object,
       required: true
     }
@@ -71,9 +72,6 @@ export default {
 
       return this.estimatedCall.realtime ? time : "ca " + time;
     }
-  },
-  now: {
-    interval: 1000 * 10
   }
 };
 </script>
