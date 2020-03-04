@@ -50,6 +50,7 @@ const getRuterColor = (number, presentation) => {
 const getKolumbusColor = (number, presentation) => {
   switch (number) {
     case '2900_245':
+    case '2900_246':
     case '2900_247':
       return {
         colour: 'ffffff',
@@ -76,7 +77,7 @@ const getAtBColor = (number, presentation) => {
   } else if (number <= 100) {
     return {
       colour: 'a1ad00',
-      textColour: 'ffffff'
+      textColour: '000000'
     }
   } else {
     return {
