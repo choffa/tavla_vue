@@ -1,0 +1,11 @@
+query citybikeData($stations: [String]!) {
+  bikeRentalStations(ids: $stations) {
+    id
+    name
+    bikesAvailable
+    spacesAvailable
+    realtimeOccupancyAvailable
+    allowDropoff
+    networks
+  }
+}
