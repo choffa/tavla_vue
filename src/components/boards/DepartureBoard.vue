@@ -1,6 +1,6 @@
 <template>
   <card>
-    <div class="header txt">{{ stopPlace.name }}</div>
+    <div class="header">{{ stopPlace.name }}</div>
     <departure-row
       v-for="call in stopPlace.estimatedCalls"
       :key="call.serviceJourney.id"
@@ -32,12 +32,3 @@ export default {
   }
 };
 </script>
-
-<style scoped>
-.header {
-  text-align: center;
-  font-size: larger;
-  line-height: 24px;
-  margin: 0.5em 0.25em;
-}
-</style>

@@ -23,4 +23,32 @@
 .card::-webkit-scrollbar {
   display: none;
 }
+
+</style>
+
+<style>
+.header {
+  text-align: center;
+  font-size: larger;
+  line-height: 24px;
+  margin: 0.5em 0.25em;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.row:not(:last-child) {
+  border-bottom: 1px solid rgba(1, 1, 1, 0.25);
+}
+
+.txt {
+  margin: 0.5rem 0.25rem;
+  line-height: 1.75em;
+}
+
+.icon {
+  height: 1.75rem;
+}
 </style>

@@ -2,7 +2,7 @@
   <div class="row">
     <img class="txt icon" :src="icon" alt="mode" />
     <span
-      class="line txt"
+      class="line icon txt"
       :style="lineIndicatorStyle"
     >{{ estimatedCall.serviceJourney.line.publicCode }}</span>
     <span class="destination txt">{{ estimatedCall.destinationDisplay.frontText }}</span>
@@ -77,24 +77,6 @@ export default {
 </script>
 
 <style scoped>
-.row {
-  display: flex;
-  align-items: center;
-}
-
-.row:not(:last-child) {
-  border-bottom: 1px solid rgba(1, 1, 1, 0.25);
-}
-
-.icon,
-.line {
-  height: 1.75rem;
-}
-
-.txt {
-  margin: 0.5rem 0.25rem;
-}
-
 .line {
   border: 1px solid rgba(1, 1, 1, 0.5);
   min-width: calc(1.4rem + (2 * 6px));
