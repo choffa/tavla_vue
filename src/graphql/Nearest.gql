@@ -1,0 +1,16 @@
+query nearest($lat: Float!, $lon: Float!, $max: Int) {
+  nearest(latitude: $lat, longitude: $lon, maximumDistance: $max, filterByPlaceTypes: [stopPlace, bicycleRent], filterByInUse: true) {
+    edges {
+      node {
+        place {
+          id
+        #   latitude
+        #   longitude
+        #   __typename
+        #   ... on BikeRentalStation {name}
+        #   ... on StopPlace {name}
+        }
+      }
+    }
+  }
+}
