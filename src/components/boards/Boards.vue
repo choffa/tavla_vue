@@ -15,7 +15,23 @@ export default {
   name: "boards",
   components: {
     DepartureBoard,
-    BikeBoard // eslint-disable-line
+    BikeBoard
+  },
+
+  props: {
+    stopPlaceIds: {
+      type: Array[String],
+      default: () => [
+        "NSR:StopPlace:25944",
+        "NSR:StopPlace:60257",
+        "NSR:StopPlace:58366",
+        "NSR:StopPlace:58545"
+      ]
+    },
+    bikeRentalStationIds: {
+      type: Array[String],
+      default: () => ["1101", "3", "4"]
+    }
   },
 
   data() {
@@ -29,20 +45,21 @@ export default {
     stopPlaces: {
       query: REALTIME_DATA,
       pollInterval: 30 * 1000,
-      variables: {
-        stops: [
-          "NSR:StopPlace:25944",
-          "NSR:StopPlace:60257",
-          "NSR:StopPlace:58366",
-          "NSR:StopPlace:58545"
-        ]
+      variables() {
+        return { stops: this.stopPlaceIds };
+      },
+      skip() {
+        return !this.stopPlaceIds.length;
       }
     },
     bikeRentalStations: {
       query: CITYBIKE_DATA,
       pollInterval: 2 * 60 * 1000,
-      variables: {
-        stations: ["1101", "3", "4"]
+      variables() {
+        return { stations: this.bikeRentalStationIds };
+      },
+      skip() {
+        return !this.bikeRentalStationIds.length;
       }
     }
   }

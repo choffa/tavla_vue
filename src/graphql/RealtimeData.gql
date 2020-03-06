@@ -2,7 +2,7 @@ query realtimeData($stops: [String]!) {
   stopPlaces(ids: $stops) {
     id
     name
-    estimatedCalls(timeRange: 72100, numberOfDepartures: 10, omitNonBoarding: true) {
+    estimatedCalls(timeRange: 7200, numberOfDepartures: 10, omitNonBoarding: true) {
       realtime
       aimedDepartureTime
       expectedDepartureTime

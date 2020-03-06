@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import MainView from './views/MainView.vue'
 import LandingPage from './views/LandingView.vue';
+import { getLatLon } from './utils/url.util'
 
 Vue.use(Router)
 
@@ -13,9 +14,10 @@ export default new Router({
       component: LandingPage
     },
     {
-      path: '/boards',
+      path: '/boards/:coordinates?',
       name: 'boards',
-      component: MainView
+      component: MainView,
+      props: (route) => getLatLon(route.params.coordinates)
     },
     {
       path: '/about',
