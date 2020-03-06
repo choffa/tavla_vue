@@ -7,6 +7,7 @@
       :estimatedCall="call"
       :now="now"
     />
+    <div class="empty header" v-if="!stopPlace.estimatedCalls.length">Ingen avganger</div>
   </card>
 </template>
 
@@ -32,3 +33,10 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.empty {
+  position: relative;
+  top: calc(50% - 2 * 24px);
+}
+</style>
