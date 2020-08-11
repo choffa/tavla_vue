@@ -1,5 +1,7 @@
 # tavla
 
+Heavily inspired by [Tavla](https://tavla.entur.no) by [EnTur](https://developer.entur.org). See also the [git repo](https://www.github.com/entur/tavla).
+
 ## Project setup
 ```
 npm install
